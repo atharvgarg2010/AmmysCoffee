@@ -34,16 +34,8 @@ export default function Navbar() {
       }`}
     >
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
-        {/* Masthead Three-Column Layout */}
         <div className="flex items-center justify-between">
-          {/* Left: Origin Placard */}
-          <div className="hidden lg:flex items-center space-x-6 text-[10px] uppercase tracking-[0.3em] text-white/50 font-mono">
-            <span>DELHI NCR</span>
-            <span className="text-white/20">/</span>
-            <span>EST. 2024</span>
-          </div>
-
-          {/* Center: Brand Identity */}
+          {/* Brand Identity */}
           <Link href="/" className="relative z-10 flex items-center focus:outline-none">
             <div className="relative h-8 w-32 sm:h-10 sm:w-44 transition-opacity duration-300 hover:opacity-85">
               <Image
@@ -51,13 +43,13 @@ export default function Navbar() {
                 alt="Ammy's Coffee"
                 fill
                 priority
-                className="object-contain"
+                className="object-contain object-left"
               />
             </div>
           </Link>
 
-          {/* Right: Desktop Editorial Nav + Franchise Link */}
-          <div className="hidden md:flex items-center space-x-8">
+          {/* Desktop Editorial Nav + Franchise Link */}
+          <div className="hidden md:flex items-center space-x-10">
             <nav className="flex items-center space-x-8">
               {navLinks.map((link) => (
                 <a
