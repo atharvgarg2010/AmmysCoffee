@@ -1,7 +1,6 @@
 'use client';
 
-import { motion } from 'framer-motion';
-import { ArrowDownRight, ArrowDown } from 'lucide-react';
+import { ArrowDownRight } from 'lucide-react';
 
 export default function HeroSection() {
   return (
@@ -27,52 +26,32 @@ export default function HeroSection() {
       {/* Top Spacer for Fixed Nav */}
       <div className="h-28 sm:h-36" />
 
-      {/* Main Editorial Statement */}
+      {/* Main Editorial Statement (Rock-Solid Visible, GPU Accelerated) */}
       <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-12 w-full flex-1 flex flex-col justify-center">
         <div className="max-w-4xl">
           {/* Subtle Category Hook */}
-          <motion.div
-            initial={{ opacity: 0, y: 15 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="flex items-center gap-3 mb-6"
-          >
+          <div className="animate-hero-pill flex items-center gap-3 mb-6">
             <span className="text-[11px] uppercase tracking-[0.3em] text-[#C88A58] font-medium">
               Delhi NCR • Specialty Coffee & Artisanal Kitchen
             </span>
-          </motion.div>
+          </div>
 
           {/* Master Headline: Bold Editorial Serif */}
-          <motion.h1
-            initial={{ opacity: 0, y: 25 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.9, delay: 0.1 }}
-            className="text-5xl sm:text-7xl lg:text-8xl font-serif font-normal tracking-tight text-[#FAF8F5] leading-[0.95] mb-8"
-          >
+          <h1 className="animate-hero-title text-5xl sm:text-7xl lg:text-8xl font-serif font-normal tracking-tight text-[#FAF8F5] leading-[0.95] mb-8">
             From Beans <br />
             <span className="italic font-light text-[#E8B88E]">To Bonds.</span>
-          </motion.h1>
+          </h1>
 
           {/* Authentic Brand Narrative */}
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.9, delay: 0.25 }}
-            className="text-base sm:text-lg text-white/70 font-light leading-relaxed max-w-xl mb-12"
-          >
+          <p className="animate-hero-desc text-base sm:text-lg text-white/80 font-light leading-relaxed max-w-xl mb-12">
             From that first pour of 100% Arabica to the last bite of our Tiramisu, everything here is made to feel like a warm hug in a cup. Your slow morning ritual, mid-day pick-me-up, and community third-place.
-          </motion.p>
+          </p>
 
           {/* Editorial CTAs */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.9, delay: 0.35 }}
-            className="flex flex-wrap items-center gap-6"
-          >
+          <div className="animate-hero-actions flex flex-wrap items-center gap-6">
             <a
               href="#menu"
-              className="group inline-flex items-center gap-3 px-8 py-4 border border-white/25 hover:border-white text-xs uppercase tracking-[0.25em] font-medium text-white hover:bg-white hover:text-[#121313] transition-all duration-300"
+              className="group inline-flex items-center gap-3 px-8 py-4 border border-white/30 hover:border-white text-xs uppercase tracking-[0.25em] font-medium text-white hover:bg-white hover:text-[#121313] transition-all duration-300"
             >
               <span>Explore Menu</span>
               <ArrowDownRight className="w-4 h-4 transition-transform group-hover:translate-x-0.5 group-hover:translate-y-0.5" />
@@ -80,12 +59,12 @@ export default function HeroSection() {
 
             <a
               href="#cafes"
-              className="text-xs uppercase tracking-[0.25em] text-white/60 hover:text-[#C88A58] transition-colors py-4 inline-flex items-center gap-2"
+              className="text-xs uppercase tracking-[0.25em] text-white/70 hover:text-[#C88A58] transition-colors py-4 inline-flex items-center gap-2"
             >
               <span>Find A Café</span>
               <span className="text-[#C88A58]">→</span>
             </a>
-          </motion.div>
+          </div>
         </div>
       </div>
 
