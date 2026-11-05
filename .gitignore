@@ -1,0 +1,44 @@
+# Dependencies
+node_modules/
+.pnp/
+.pnp.js
+
+# Testing
+coverage/
+
+# Next.js / Vite build output
+.next/
+out/
+build/
+dist/
+
+# Large binary raw archives and media
+*.zip
+*.tar.gz
+assets/*.pdf
+assets/page_previews/
+brand_materials/
+
+# Production assets will live in public/ or assets/ (optimized WebP and compressed MP4)
+
+# Misc
+.DS_Store
+*.pem
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# Environment variables
+.env*.local
+.env
+
+# Vercel / IDE
+.vercel/
+.idea/
+.vscode/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
