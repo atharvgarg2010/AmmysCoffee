@@ -13,29 +13,29 @@ export default function StoreMarquee() {
   ];
 
   return (
-    <div className="relative w-full overflow-hidden bg-[#18191A] border-y border-[#C88A58]/25 py-3.5 sm:py-4 select-none z-20">
+    <div className="relative w-full overflow-hidden bg-[#18191A] border-y border-[#C88A58]/25 py-3 sm:py-4 select-none z-20 shrink-0">
       {/* Infinite Scrolling Track */}
       <div className="animate-marquee flex items-center whitespace-nowrap">
         {/* Set 1 */}
-        <div className="flex items-center space-x-7 sm:space-x-12 pr-7 sm:pr-12">
+        <div className="flex items-center space-x-6 sm:space-x-12 pr-6 sm:pr-12">
           {items.map((item, index) => (
-            <div key={`set1-${index}`} className="flex items-center space-x-7 sm:space-x-12">
-              <span className="text-[10px] sm:text-[11px] uppercase tracking-[0.3em] font-medium text-[#E8B88E]">
+            <div key={`set1-${index}`} className="flex items-center space-x-6 sm:space-x-12">
+              <span className="text-[9.5px] sm:text-[11px] uppercase tracking-[0.26em] sm:tracking-[0.3em] font-medium text-[#E8B88E]">
                 {item}
               </span>
-              <span className="text-[#C88A58] text-[11px] font-normal">✦</span>
+              <span className="text-[#C88A58] text-[10px] sm:text-[11px] font-normal">✦</span>
             </div>
           ))}
         </div>
 
         {/* Set 2 (Cloned for Seamless Infinite Loop) */}
-        <div className="flex items-center space-x-7 sm:space-x-12 pr-7 sm:pr-12" aria-hidden="true">
+        <div className="flex items-center space-x-6 sm:space-x-12 pr-6 sm:pr-12" aria-hidden="true">
           {items.map((item, index) => (
-            <div key={`set2-${index}`} className="flex items-center space-x-7 sm:space-x-12">
-              <span className="text-[10px] sm:text-[11px] uppercase tracking-[0.3em] font-medium text-[#E8B88E]">
+            <div key={`set2-${index}`} className="flex items-center space-x-6 sm:space-x-12">
+              <span className="text-[9.5px] sm:text-[11px] uppercase tracking-[0.26em] sm:tracking-[0.3em] font-medium text-[#E8B88E]">
                 {item}
               </span>
-              <span className="text-[#C88A58] text-[11px] font-normal">✦</span>
+              <span className="text-[#C88A58] text-[10px] sm:text-[11px] font-normal">✦</span>
             </div>
           ))}
         </div>
