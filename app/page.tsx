@@ -1,5 +1,6 @@
 import Navbar from '@/components/layout/Navbar';
 import HeroSection from '@/components/hero/HeroSection';
+import StorySection from '@/components/story/StorySection';
 
 export default function HomePage() {
   return (
@@ -10,14 +11,14 @@ export default function HomePage() {
       {/* Hero Section with Ambient 4K Video Background & Dynamic Transitions */}
       <HeroSection />
 
-      {/* Temporary section anchor placeholders for smooth navigation links */}
-      <div id="story" className="py-12" />
-      <div id="craft" className="py-4" />
-      <div id="menu" className="py-4" />
+      {/* Section 2: Brand Ethos, Story & Craft Pillars (Warm Cream Canvas) */}
+      <StorySection />
+
+      {/* Temporary section anchor placeholders for upcoming sections */}
+      <div id="menu" className="py-8" />
       <div id="gallery" className="py-4" />
       <div id="cafes" className="py-4" />
-      <div id="franchise" className="py-12" />
+      <div id="franchise" className="py-8" />
     </main>
   );
 }
-
