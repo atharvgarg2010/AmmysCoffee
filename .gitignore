@@ -17,6 +17,10 @@ dist/
 *.tar.gz
 assets/*.pdf
 assets/page_previews/
+assets/frame_test/
+assets/gallery_thumbs/
+assets/logo_*.png
+assets/logo_*.svg
 brand_materials/
 
 # Production assets will live in public/ or assets/ (optimized WebP and compressed MP4)
@@ -42,3 +46,4 @@ yarn-error.log*
 *.njsproj
 *.sln
 *.sw?
+

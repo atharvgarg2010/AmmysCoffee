@@ -16,6 +16,7 @@
 Ammy's Coffee is an expanding café brand with two distinct target audiences:
 
 ### Audience A: Retail Café Customers
+
 - **Goal:** Brand discovery, appetite appeal, café exploration, and visiting physical stores.
 - **Key Needs:**
   - Understand the brand ethos and café vibe.
@@ -24,6 +25,7 @@ Ammy's Coffee is an expanding café brand with two distinct target audiences:
   - Experience an appetizing, immersive, editorial online presence.
 
 ### Audience B: Prospective Franchise Partners (Crucial Commercial Priority)
+
 - **Goal:** Partner acquisition and high-intent lead capture.
 - **Key Needs:**
   - Dedicated "Franchise With Us" gateway (not an afterthought or hidden footer link).
@@ -37,10 +39,12 @@ Ammy's Coffee is an expanding café brand with two distinct target audiences:
 ## 3. Reference Websites & Competitive Benchmarks
 
 ### 1. The Waffle Co. (`https://thewaffleco.in/`)
+
 - **Relationship:** Associated with the brand's business network; referenced for structural IA and franchise lead capture.
 - **Guardrail:** Structural benchmark only; do NOT clone its visual design.
 
 ### 2. Kofi Kafi (`https://www.kofikafi.com/`)
+
 - **Inspiration Takeaways:**
   - **Youthful Energy & Cultural Pulse:** Punchy, unapologetic Gen-Z copy ("We serve vibe", community movement, hustle culture).
   - **Smart Frictionless Actions:** Clean CTA buttons: `Find A Store` (Google Maps integration), `View Menu` (direct PDF access), and optional external `Order on Zomato / Swiggy` links.
@@ -65,6 +69,7 @@ Ammy's Coffee is an expanding café brand with two distinct target audiences:
 ## 5. Design Direction & Aesthetic Standards
 
 ### Visual Language
+
 - **Vibe:** Premium, modern, editorial, warm, welcoming, youthful without being childish.
 - **Photography:** High-contrast, rich, authentic coffee and café imagery; generous scale.
 - **Typography:** Strong, elegant hierarchy (editorial display headings paired with clean, highly readable modern body type).
@@ -72,6 +77,7 @@ Ammy's Coffee is an expanding café brand with two distinct target audiences:
 - **Motion & Interactions:** Restrained, smooth, micro-interactions, subtle reveals; avoid distracting or gimmicky animations.
 
 ### What to Strictly Avoid
+
 - Generic "café bootstrap template" aesthetics.
 - Monotonous walls of dark muddy brown.
 - Cheesy coffee beans / steam vector clipart.
@@ -91,7 +97,8 @@ Ammy's Coffee is an expanding café brand with two distinct target audiences:
 
 ## 7. Current Project Status & Brand Inventory
 
-### Confirmed Assets & Business Data (100% Grounded):
+### Confirmed Assets & Business Data (100% Grounded)
+
 - **Core Taglines & Official Narrative:**
   - *"From Beans to Bonds"* — Two beans = one bond.
   - *"From that first pour of 100% Arabica to the last bite of our Tiramisu, everything here is made to feel like a warm hug in a cup."*
@@ -114,7 +121,8 @@ Ammy's Coffee is an expanding café brand with two distinct target audiences:
 - **Brand Typography:** `Omalt Regular` (Display), `Museo Sans Rounded` (Body/Subtitles), `Gluck Regular` (Accent).
 - **Brand Palette:** Espresso Obsidian (`#121313`), Warm Cream (`#FAF8F5`/`#EEE6EA`), Latte Bronze (`#C88A58`), and Slate (`#2D2E2E`).
 
-### Pending / Unknowns (To Be Confirmed during CEO Pitch):
+### Pending / Unknowns (To Be Confirmed during CEO Pitch)
+
 - Formal franchise investment qualification brackets (lead capture form will use standard tier dropdowns until specified).
 - Final production deployment domain and server infrastructure.
 
@@ -125,4 +133,3 @@ Ammy's Coffee is an expanding café brand with two distinct target audiences:
 - **Preferred Stack:** Modern React / Next.js with Tailwind CSS, TypeScript, and modern component architecture.
 - **Code Standards:** Clean, modular, mobile-first responsive design, accessible semantic HTML, high Lighthouse performance targets.
 - **Action Readiness:** All implementation steps must be coordinated with the developer. Do not generate extraneous boilerplate without explicit instructions.
-

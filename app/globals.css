@@ -1,0 +1,79 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-espresso: #121313;
+  --color-espresso-surface: #18191A;
+  --color-espresso-card: #202124;
+  --color-espresso-border: #2E2F33;
+
+  --color-cream: #FAF8F5;
+  --color-cream-surface: #F4EFEA;
+  --color-cream-card: #FFFFFF;
+
+  --color-caramel: #C88A58;
+  --color-caramel-hover: #B57846;
+  --color-caramel-light: #E8B88E;
+  --color-caramel-glow: rgba(200, 138, 88, 0.25);
+
+  --font-serif: var(--font-playfair), "Georgia", "Times New Roman", serif;
+  --font-sans: var(--font-jakarta), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+:root {
+  --bg-primary: #121313;
+  --text-primary: #F5F5F7;
+  --accent: #C88A58;
+}
+
+html {
+  scroll-behavior: smooth;
+  color-scheme: dark light;
+}
+
+body {
+  background-color: #121313;
+  color: #F5F5F7;
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #121313;
+}
+::-webkit-scrollbar-thumb {
+  background: #2E2F33;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #C88A58;
+}
+
+/* Subtle glow utility */
+.glow-caramel {
+  box-shadow: 0 0 35px -5px rgba(200, 138, 88, 0.35);
+}
+
+.glow-caramel-sm {
+  box-shadow: 0 0 15px -3px rgba(200, 138, 88, 0.25);
+}
+
+/* Glassmorphism */
+.glass-espresso {
+  background: rgba(18, 19, 19, 0.75);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.glass-pill {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
