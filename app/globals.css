@@ -90,6 +90,26 @@ body {
   animation: heroFadeUp 0.9s cubic-bezier(0.16, 1, 0.3, 1) 0.38s both;
 }
 
+/* Infinite Marquee Animation (Smooth GPU-accelerated) */
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee 32s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+
 /* Glassmorphism */
 .glass-espresso {
   background: rgba(18, 19, 19, 0.75);

@@ -1,6 +1,7 @@
 'use client';
 
 import { ArrowDownRight } from 'lucide-react';
+import StoreMarquee from './StoreMarquee';
 
 export default function HeroSection() {
   return (
@@ -68,28 +69,8 @@ export default function HeroSection() {
         </div>
       </div>
 
-      {/* Editorial Footer Manifest: Roman Numeral Index */}
-      <div className="relative z-10 border-t border-white/[0.08] mt-12 bg-[#111213]/80 backdrop-blur-sm">
-        <div className="max-w-7xl mx-auto px-6 lg:px-12 py-5 flex flex-col md:flex-row items-center justify-between gap-4 text-center md:text-left">
-          {/* Roman Numeral Outlets Index */}
-          <div className="flex flex-wrap items-center justify-center md:justify-start gap-x-6 gap-y-2 text-[10px] uppercase tracking-[0.25em] text-white/50 font-mono">
-            <span>I. Greater Kailash I</span>
-            <span className="text-white/20">·</span>
-            <span>II. Galleria Gurugram</span>
-            <span className="text-white/20">·</span>
-            <span>III. SDA Market</span>
-            <span className="text-white/20">·</span>
-            <span>IV. Punjabi Bagh</span>
-            <span className="text-white/20">·</span>
-            <span>V. Gujranwala Town</span>
-          </div>
-
-          {/* Craft Philosophy Note */}
-          <div className="text-[10px] uppercase tracking-[0.25em] text-[#C88A58] font-mono shrink-0">
-            <span>100% Arabica • Artisanal Kitchen</span>
-          </div>
-        </div>
-      </div>
+      {/* Store Marquee Bar (Deep Burgundy & Champagne Gold Outlets Ticker) */}
+      <StoreMarquee />
     </section>
   );
 }
