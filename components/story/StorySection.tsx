@@ -1,156 +1,112 @@
 import Image from 'next/image';
+import { ArrowDownRight } from 'lucide-react';
 
 export default function StorySection() {
-  const sensoryChapters = [
+  const pillars = [
     {
-      roman: 'I',
-      tag: 'THE BEAN',
-      title: 'Estate-Grown Arabica',
+      title: '100% Specialty Arabica',
       description:
-        'Sourced from certified high-elevation shade canopies. Precision-roasted to coax out deep cacao nib, toasted hazelnut, and silky caramel sweetness with zero bitterness.',
+        'Sourced from certified high-altitude shade estates. Precision-roasted to unlock deep cacao, toasted hazelnut, and natural caramel sweetness with zero bitterness.',
     },
     {
-      roman: 'II',
-      tag: 'THE BAKE',
-      title: 'Artisanal Viennoiserie',
+      title: 'Artisanal Bakery & Desserts',
       description:
-        '72 laminated butter layers, handcrafted daily. Flaky morning croissants, caramelized San Sebastian cheesecakes, and small-batch patisserie baked fresh in NCR.',
+        'Flaky 72-layer butter croissants, Lotus Biscoff treats, and caramelized San Sebastian cheesecakes baked fresh every morning across Delhi NCR.',
     },
     {
-      roman: 'III',
-      tag: 'THE ROOM',
-      title: 'The Third-Place Sanctuary',
+      title: 'The Aesthetic Third-Place',
       description:
-        'The intimate space between home and work. Soft amber pendant glow, architectural velvet seating, and a room purposefully built for slow catch-ups and lingering.',
+        'A warm sanctuary between home and work. Soft amber lighting, bold art, and cozy velvet booths that invite you to slow down and stay longer.',
     },
   ];
 
   return (
-    <section id="story" className="relative w-full bg-[#121313] text-[#FAF8F5] py-28 sm:py-36 lg:py-44 overflow-hidden border-t border-white/[0.06]">
-      {/* Subtle Ambient Radial Lighting */}
-      <div className="absolute top-1/4 right-0 w-[500px] h-[500px] bg-[#C88A58]/[0.03] rounded-full blur-[140px] pointer-events-none" />
-      <div className="absolute bottom-10 left-10 w-[400px] h-[400px] bg-[#E8B88E]/[0.02] rounded-full blur-[120px] pointer-events-none" />
+    <section id="story" className="relative w-full bg-[#121313] text-[#FAF8F5] py-24 sm:py-32 lg:py-40 overflow-hidden">
+      {/* Subtle Warm Amber Atmosphere */}
+      <div className="absolute top-1/3 right-1/4 w-[500px] h-[500px] bg-[#C88A58]/[0.04] rounded-full blur-[140px] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
-        {/* Monograph Top Label */}
-        <div className="flex items-center justify-between border-b border-white/[0.08] pb-6 mb-16 sm:mb-24">
-          <div className="flex items-center gap-3">
-            <span className="w-2 h-2 rounded-full bg-[#C88A58]" />
-            <span className="text-[10px] sm:text-[11px] uppercase tracking-[0.38em] text-[#C88A58] font-sans font-medium">
-              LOOKBOOK // 002 — THE MANIFESTO
-            </span>
-          </div>
-          <span className="text-[10px] sm:text-[11px] uppercase tracking-[0.3em] text-white/40 font-sans hidden sm:inline">
-            DELHI NCR • FIVE FLAGSHIPS
+        
+        {/* Editorial Section Header: Warm, Human, Elegant */}
+        <div className="max-w-3xl mb-16 sm:mb-24">
+          <span className="text-[11px] sm:text-xs uppercase tracking-[0.3em] font-medium text-[#C88A58] block mb-4">
+            The Ammy&apos;s Philosophy
           </span>
-        </div>
-
-        {/* Monumental Editorial Statement */}
-        <div className="max-w-4xl mb-20 sm:mb-28">
-          <h2 className="text-3xl sm:text-5xl lg:text-[4.25rem] font-serif font-normal text-[#FAF8F5] leading-[1.08] tracking-[-0.03em]">
-            &ldquo;We brew more than coffee. We cultivate the space where{' '}
-            <span className="italic font-light text-[#E8B88E]">
-              community thrives and stories unfold.
-            </span>
-            &rdquo;
+          <h2 className="text-4xl sm:text-6xl lg:text-7xl font-serif font-normal text-[#FAF8F5] leading-[1.05] tracking-[-0.03em] mb-6">
+            Come for the coffee. <br />
+            <span className="italic font-light text-[#E8B88E]">Stay for the connection.</span>
           </h2>
-          <p className="mt-8 text-base sm:text-lg text-white/60 font-light leading-relaxed max-w-2xl">
-            Born in the vibrant café culture of South Delhi and Gurugram, Ammy’s was founded on a singular conviction: third-wave craft coffee should never feel cold or unapproachable. Every cup is an invitation to slow down.
+          <p className="text-base sm:text-lg text-white/70 font-light leading-relaxed max-w-2xl">
+            Step into Ammy&apos;s and enter your second home — where the lighting&apos;s soft, the art&apos;s bold, and the booths practically beg you to stay longer. From that first pour of 100% Arabica to the last bite of our warm San Sebastian, everything here is made to feel like a warm hug in a cup.
           </p>
         </div>
 
-        {/* Editorial Asymmetric Photographic Spread (Lookbook Diptych) */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-end mb-24 sm:mb-32">
-          {/* Main Visual: Flagship Sanctuary (7 Columns) */}
-          <div className="lg:col-span-7 flex flex-col space-y-4">
-            <div className="relative aspect-[16/11] sm:aspect-[16/10] w-full overflow-hidden border border-white/[0.08] bg-[#18191A]">
+        {/* Visual Storytelling: Editorial Dual Photography */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center mb-20 sm:mb-28">
+          {/* Main Space Photo (7 cols) */}
+          <div className="lg:col-span-7 space-y-3">
+            <div className="relative aspect-[16/10] w-full overflow-hidden rounded-lg bg-[#18191A] border border-white/[0.08]">
               <Image
                 src="/assets/photos/cafe_interior_1.webp"
-                alt="Ammy's Flagship Interior Sanctuary"
+                alt="Ammy's Flagship Interior in Greater Kailash I"
                 fill
                 sizes="(max-width: 1024px) 100vw, 58vw"
-                className="object-cover object-center grayscale-[15%] contrast-[1.05] hover:scale-[1.02] transition-transform duration-1000"
+                className="object-cover object-center hover:scale-[1.02] transition-transform duration-700"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#121313]/70 via-transparent to-transparent pointer-events-none" />
             </div>
-            <div className="flex items-center justify-between pt-1">
-              <span className="text-[10px] uppercase tracking-[0.28em] text-[#C88A58] font-sans">
-                PLATE 01 / THE SANCTUARY
-              </span>
-              <span className="text-[10px] uppercase tracking-[0.24em] text-white/40 font-sans">
-                GREATER KAILASH I • EST. 2024
-              </span>
-            </div>
+            <p className="text-[11px] uppercase tracking-[0.24em] text-white/50">
+              The Flagship Lounge • Greater Kailash I (M-Block)
+            </p>
           </div>
 
-          {/* Secondary Visual: Tactile Barista Craft (5 Columns, Offset) */}
-          <div className="lg:col-span-5 flex flex-col space-y-4 lg:mb-8">
-            <div className="relative aspect-[4/5] sm:aspect-[1/1] lg:aspect-[4/5] w-full overflow-hidden border border-white/[0.08] bg-[#18191A]">
+          {/* Barista Craft Photo (5 cols) */}
+          <div className="lg:col-span-5 space-y-3 lg:pt-8">
+            <div className="relative aspect-[4/5] w-full overflow-hidden rounded-lg bg-[#18191A] border border-white/[0.08]">
               <Image
                 src="/assets/photos/cafe_barista.webp"
-                alt="Ammy's Barista Espresso Pour"
+                alt="Ammy's Barista Hand-Pulling Specialty Espresso"
                 fill
                 sizes="(max-width: 1024px) 100vw, 42vw"
-                className="object-cover object-center grayscale-[15%] contrast-[1.05] hover:scale-[1.02] transition-transform duration-1000"
+                className="object-cover object-center hover:scale-[1.02] transition-transform duration-700"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#121313]/70 via-transparent to-transparent pointer-events-none" />
             </div>
-            <div className="flex items-center justify-between pt-1">
-              <span className="text-[10px] uppercase tracking-[0.28em] text-[#E8B88E] font-sans">
-                PLATE 02 / THE EXTRACTION
-              </span>
-              <span className="text-[10px] uppercase tracking-[0.24em] text-white/40 font-sans">
-                100% ARABICA CRAFT
-              </span>
-            </div>
+            <p className="text-[11px] uppercase tracking-[0.24em] text-[#C88A58]">
+              Handcrafted 100% Arabica Brewed Daily
+            </p>
           </div>
         </div>
 
-        {/* The Sensory Triptych (Replaces SaaS Feature List with High-Fashion Editorial Columns) */}
-        <div id="craft" className="scroll-mt-32 pt-16 border-t border-white/[0.08]">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-12 lg:gap-16">
-            {sensoryChapters.map((chapter) => (
-              <div key={chapter.roman} className="flex flex-col space-y-4 group">
-                <div className="flex items-center gap-3">
-                  <span className="text-xs uppercase tracking-[0.3em] font-sans text-[#C88A58]">
-                    [ {chapter.roman} ]
-                  </span>
-                  <span className="text-[10px] uppercase tracking-[0.32em] text-white/40 font-sans">
-                    {chapter.tag}
-                  </span>
-                </div>
-
-                <h3 className="text-xl sm:text-2xl font-serif text-[#FAF8F5] leading-snug font-normal group-hover:text-[#E8B88E] transition-colors">
-                  {chapter.title}
+        {/* The Three Craft Pillars */}
+        <div id="craft" className="scroll-mt-32 pt-12 border-t border-white/[0.08]">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-10 lg:gap-14">
+            {pillars.map((pillar, index) => (
+              <div key={index} className="space-y-3">
+                <span className="text-[11px] uppercase tracking-[0.28em] text-[#C88A58] block font-medium">
+                  {`0${index + 1}`}
+                </span>
+                <h3 className="text-xl sm:text-2xl font-serif text-[#FAF8F5] font-normal">
+                  {pillar.title}
                 </h3>
-
-                <p className="text-xs sm:text-sm text-white/60 font-light leading-relaxed">
-                  {chapter.description}
+                <p className="text-sm text-white/60 font-light leading-relaxed">
+                  {pillar.description}
                 </p>
               </div>
             ))}
           </div>
         </div>
 
-        {/* Quiet Editorial Quote Plaque */}
-        <div className="mt-24 sm:mt-32 pt-10 border-t border-white/[0.06] flex flex-col sm:flex-row sm:items-center justify-between gap-6">
-          <p className="text-sm font-serif italic text-white/50">
-            &ldquo;Two beans = one bond. Sourced with honor, served with intention.&rdquo;
-          </p>
-          <div className="flex items-center space-x-8">
-            <a
-              href="#menu"
-              className="text-xs uppercase tracking-[0.26em] text-[#C88A58] hover:text-[#FAF8F5] transition-colors border-b border-[#C88A58]/40 pb-1"
-            >
-              The Visual Menu →
-            </a>
-            <a
-              href="#cafes"
-              className="text-xs uppercase tracking-[0.26em] text-white/50 hover:text-white transition-colors"
-            >
-              The Five Cafés
-            </a>
-          </div>
+        {/* Sensory Footer Note */}
+        <div className="mt-20 pt-8 border-t border-white/[0.06] flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+          <span className="text-xs uppercase tracking-[0.26em] text-white/40">
+            Delhi NCR • GK-1 • Galleria • SDA • Punjabi Bagh • Gujranwala
+          </span>
+          <a
+            href="#menu"
+            className="inline-flex items-center gap-2 text-xs uppercase tracking-[0.24em] text-[#E8B88E] hover:text-white transition-colors"
+          >
+            <span>Explore The Menu</span>
+            <ArrowDownRight className="w-3.5 h-3.5" />
+          </a>
         </div>
 
       </div>
