@@ -142,7 +142,7 @@ export default function FranchiseSection() {
   return (
     <section
       id="franchise"
-      className="relative w-full scroll-mt-24 overflow-hidden border-t border-cream/10 bg-espresso py-20 text-cream sm:py-28 lg:py-36"
+      className="relative w-full scroll-mt-24 overflow-hidden border-t border-cream/10 bg-espresso pt-10 pb-20 text-cream sm:pt-14 sm:pb-28 lg:pt-16 lg:pb-36"
     >
       <div className="pointer-events-none absolute -right-24 top-1/3 h-[420px] w-[420px] rounded-full bg-caramel/[0.05] blur-[140px]" />
 
