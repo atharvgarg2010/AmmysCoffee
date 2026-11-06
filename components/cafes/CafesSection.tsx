@@ -264,11 +264,11 @@ export default function CafesSection() {
               }`}
             />
 
-            {/* Bounded Scroll Container on desktop */}
+            {/* Bounded Scroll Container on desktop (Invisible scrollbar, smooth scroll track) */}
             <div
               ref={listRef}
               onScroll={handleListScroll}
-              className="lg:h-[580px] lg:overflow-y-auto lg:pr-3 luxury-scrollbar border-t border-cream/10 divide-y divide-cream/10"
+              className="lg:h-[580px] lg:overflow-y-auto no-scrollbar border-t border-cream/10 divide-y divide-cream/10"
             >
               {outlets.map((outlet, index) => {
                 const isActive = activeIndex === index;
