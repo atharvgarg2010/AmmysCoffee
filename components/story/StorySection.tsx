@@ -6,25 +6,21 @@ const photos = [
     src: '/assets/photos/cafe_interior_1.webp',
     alt: "Ammy's café interior, Delhi NCR",
     span: 7,
-    caption: '01 — The Room',
   },
   {
     src: '/assets/photos/cafe_barista.webp',
     alt: "Barista at work at Ammy's Coffee",
     span: 5,
-    caption: '02 — The Pull',
   },
   {
     src: '/assets/photos/cafe_interior_2.webp',
     alt: "Ammy's café interior seating",
     span: 5,
-    caption: '03 — The Booth',
   },
   {
     src: '/assets/photos/cafe_ambience.webp',
     alt: 'Warm amber café ambience',
     span: 7,
-    caption: '04 — The Light',
   },
 ] as const;
 
@@ -81,9 +77,6 @@ export default function StorySection() {
                   className="object-cover object-center"
                 />
               </div>
-              <figcaption className="mt-2 text-[9px] uppercase tracking-[0.2em] text-cream/60 sm:mt-3 sm:text-[10px] sm:tracking-[0.24em]">
-                {photo.caption}
-              </figcaption>
             </figure>
           ))}
         </div>
