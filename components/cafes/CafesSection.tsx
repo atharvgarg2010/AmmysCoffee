@@ -314,8 +314,8 @@ export default function CafesSection() {
                         </span>
 
                         <div className="min-w-0 flex-1">
-                          {/* Kicker tag with live indicator */}
-                          <div className="flex items-center gap-2 mb-1.5">
+                          {/* Kicker tag */}
+                          <div className="mb-1.5">
                             <span
                               className={`text-[10px] uppercase tracking-[0.24em] font-medium transition-colors ${
                                 isActive
@@ -325,12 +325,6 @@ export default function CafesSection() {
                             >
                               {outlet.tag}
                             </span>
-                            {isActive && (
-                              <span className="inline-flex items-center gap-1.5 text-[9px] uppercase tracking-[0.18em] text-cream/45">
-                                <span className="h-1.5 w-1.5 rounded-full bg-caramel animate-pulse" />
-                                Live View
-                              </span>
-                            )}
                           </div>
 
                           {/* Outlet Name with subtle kinetic nudge */}
