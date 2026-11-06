@@ -151,7 +151,7 @@ export default function CafesSection() {
     <section
       ref={sectionRef}
       id="cafes"
-      className="relative w-full scroll-mt-24 overflow-hidden bg-espresso py-20 text-cream sm:py-28 lg:py-36"
+      className="relative w-full scroll-mt-24 overflow-hidden bg-espresso pt-8 pb-20 text-cream sm:pt-12 sm:pb-28 lg:pt-14 lg:pb-36"
     >
       {/* Ambient background glow */}
       <div className="pointer-events-none absolute -left-1/4 top-1/4 h-[500px] w-[500px] rounded-full bg-caramel/[0.04] blur-[140px]" />

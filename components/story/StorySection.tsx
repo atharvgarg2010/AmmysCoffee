@@ -28,7 +28,7 @@ export default function StorySection() {
   return (
     <section
       id="story"
-      className="relative w-full scroll-mt-24 overflow-hidden bg-espresso py-20 text-cream sm:py-28 lg:py-36"
+      className="relative w-full scroll-mt-24 overflow-hidden bg-espresso pt-20 pb-12 text-cream sm:pt-28 sm:pb-14 lg:pt-36 lg:pb-16"
     >
       <div className="pointer-events-none absolute right-1/4 top-1/3 h-[500px] w-[500px] rounded-full bg-caramel/[0.04] blur-[140px]" />
 
@@ -81,10 +81,13 @@ export default function StorySection() {
           ))}
         </div>
 
-        <div className="mt-12 flex justify-end sm:mt-16">
+        <div className="mt-8 flex items-center justify-between border-t border-cream/10 pt-6 sm:mt-10">
+          <span className="text-[10px] uppercase tracking-[0.24em] text-cream/40">
+            Crafted with 100% Arabica
+          </span>
           <Link
             href="/menu"
-            className="inline-flex items-center gap-3 border-b border-cream/30 pb-2 text-[11px] uppercase tracking-[0.24em] text-cream transition-colors hover:border-caramel hover:text-caramel focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-caramel/70"
+            className="inline-flex items-center gap-2 border-b border-cream/30 pb-1 text-[11px] uppercase tracking-[0.24em] text-cream transition-colors hover:border-caramel hover:text-caramel focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-caramel/70"
           >
             Explore the Menu
             <span aria-hidden="true">→</span>
