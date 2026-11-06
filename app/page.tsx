@@ -1,24 +1,22 @@
 import Navbar from '@/components/layout/Navbar';
+import Footer from '@/components/layout/Footer';
 import HeroSection from '@/components/hero/HeroSection';
 import StorySection from '@/components/story/StorySection';
+import CafesSection from '@/components/cafes/CafesSection';
+import FranchiseSection from '@/components/franchise/FranchiseSection';
 
 export default function HomePage() {
   return (
-    <main className="min-h-screen bg-[#121313] text-[#F5F5F7] selection:bg-[#C88A58]/30">
-      {/* Sticky Atmospheric Navbar */}
+    <main
+      id="top"
+      className="min-h-screen bg-espresso text-cream selection:bg-caramel/30"
+    >
       <Navbar />
-
-      {/* Hero Section with Ambient 4K Video Background & Dynamic Transitions */}
       <HeroSection />
-
-      {/* Section 2: Brand Ethos, Story & Craft Pillars (Warm Cream Canvas) */}
       <StorySection />
-
-      {/* Temporary section anchor placeholders for upcoming sections */}
-      <div id="menu" className="py-8" />
-      <div id="gallery" className="py-4" />
-      <div id="cafes" className="py-4" />
-      <div id="franchise" className="py-8" />
+      <CafesSection />
+      <FranchiseSection />
+      <Footer />
     </main>
   );
 }

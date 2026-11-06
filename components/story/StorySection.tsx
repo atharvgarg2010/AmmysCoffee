@@ -90,7 +90,7 @@ export default function StorySection() {
 
         <div className="mt-12 flex justify-end sm:mt-16">
           <Link
-            href="#menu"
+            href="/menu"
             className="inline-flex items-center gap-3 border-b border-cream/30 pb-2 text-[11px] uppercase tracking-[0.24em] text-cream transition-colors hover:border-caramel hover:text-caramel focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-caramel/70"
           >
             Explore the Menu
