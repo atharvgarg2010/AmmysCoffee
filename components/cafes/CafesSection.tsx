@@ -280,85 +280,132 @@ export default function CafesSection() {
                     }}
                     onMouseEnter={() => setActiveIndex(index)}
                     onClick={() => scrollToOutlet(index)}
-                    className={`group cursor-pointer py-7 sm:py-9 px-4 sm:px-6 -mx-2 sm:-mx-4 rounded-xl transition-all duration-300 ${
+                    className={`group relative cursor-pointer py-7 sm:py-8 px-5 sm:px-7 -mx-2 sm:-mx-4 rounded-2xl transition-all duration-300 ease-out ${
                       isActive
-                        ? 'bg-cream/[0.04] border-l-2 border-caramel pl-5 sm:pl-7'
-                        : 'hover:bg-cream/[0.02]'
+                        ? 'bg-gradient-to-r from-caramel/[0.09] via-cream/[0.03] to-transparent shadow-lg shadow-black/20'
+                        : 'hover:bg-gradient-to-r hover:from-caramel/[0.05] hover:via-cream/[0.015] hover:to-transparent'
                     }`}
                   >
-                    <div className="flex items-start gap-5 sm:gap-7">
-                      {/* Outlet Number */}
-                      <span
-                        className={`mt-1 shrink-0 text-[11px] font-mono tracking-[0.24em] transition-colors ${
-                          isActive
-                            ? 'text-caramel font-semibold'
-                            : 'text-cream/40 group-hover:text-caramel'
-                        }`}
-                      >
-                        {String(index + 1).padStart(2, '0')}
-                      </span>
+                    {/* Left Vertical Accent Bar (Absolute - Zero Layout Jitter) */}
+                    <span
+                      aria-hidden="true"
+                      className={`absolute left-0 top-3 bottom-3 w-[2.5px] rounded-r-full transition-all duration-500 ease-out ${
+                        isActive
+                          ? 'bg-caramel opacity-100 scale-y-100 shadow-[0_0_12px_rgba(200,138,88,0.7)]'
+                          : 'bg-caramel/40 opacity-0 scale-y-50 group-hover:opacity-100 group-hover:scale-y-90'
+                      }`}
+                    />
 
-                      <div className="min-w-0 flex-1">
-                        {/* Title & Phone */}
-                        <div className="flex flex-col gap-2 sm:flex-row sm:items-baseline sm:justify-between">
-                          <div>
-                            <span className="text-[10px] uppercase tracking-[0.24em] text-caramel/90 font-medium block mb-1">
-                              {outlet.tag}
-                            </span>
-                            <h3
-                              className={`font-serif text-2xl font-normal tracking-[-0.01em] transition-colors sm:text-[1.75rem] ${
+                    <div className="flex items-start justify-between gap-4">
+                      <div className="flex items-start gap-4 sm:gap-6 min-w-0 flex-1">
+                        {/* Monospace Badge Number */}
+                        <span
+                          className={`mt-1 shrink-0 inline-flex items-center justify-center font-mono text-[10px] tracking-[0.2em] rounded-md px-2.5 py-1 transition-all duration-300 ${
+                            isActive
+                              ? 'bg-caramel/20 text-caramel border border-caramel/40 font-semibold'
+                              : 'text-cream/40 border border-cream/10 group-hover:text-caramel group-hover:border-caramel/30 group-hover:bg-caramel/[0.08]'
+                          }`}
+                        >
+                          {String(index + 1).padStart(2, '0')}
+                        </span>
+
+                        <div className="min-w-0 flex-1">
+                          {/* Kicker tag with live indicator */}
+                          <div className="flex items-center gap-2 mb-1.5">
+                            <span
+                              className={`text-[10px] uppercase tracking-[0.24em] font-medium transition-colors ${
                                 isActive
-                                  ? 'text-cream'
-                                  : 'text-cream/85 group-hover:text-cream'
+                                  ? 'text-caramel'
+                                  : 'text-caramel/70 group-hover:text-caramel'
                               }`}
                             >
-                              {outlet.name}
-                            </h3>
+                              {outlet.tag}
+                            </span>
+                            {isActive && (
+                              <span className="inline-flex items-center gap-1.5 text-[9px] uppercase tracking-[0.18em] text-cream/45">
+                                <span className="h-1.5 w-1.5 rounded-full bg-caramel animate-pulse" />
+                                Live View
+                              </span>
+                            )}
                           </div>
 
-                          <a
-                            href={`tel:${outlet.phone}`}
-                            onClick={(e) => e.stopPropagation()}
-                            aria-label={`Call ${outlet.name} at ${outlet.displayPhone}`}
-                            className="inline-flex items-center gap-1.5 text-xs tabular-nums tracking-[0.04em] text-cream/60 transition-colors hover:text-caramel focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-caramel/70"
+                          {/* Outlet Name with subtle kinetic nudge */}
+                          <h3
+                            className={`font-serif text-2xl font-normal tracking-[-0.01em] transition-all duration-300 sm:text-[1.8rem] ${
+                              isActive
+                                ? 'text-cream translate-x-1'
+                                : 'text-cream/80 group-hover:text-cream group-hover:translate-x-1'
+                            }`}
                           >
-                            <Phone className="h-3 w-3 text-caramel/70" />
-                            {outlet.displayPhone}
-                          </a>
+                            {outlet.name}
+                          </h3>
+
+                          {/* Address */}
+                          <div className="mt-2.5 flex items-start gap-2 text-sm leading-relaxed text-cream/70 transition-colors group-hover:text-cream/85">
+                            <MapPin
+                              className={`h-3.5 w-3.5 shrink-0 mt-1 transition-colors ${
+                                isActive
+                                  ? 'text-caramel'
+                                  : 'text-caramel/70 group-hover:text-caramel'
+                              }`}
+                            />
+                            <p className="max-w-[46ch]">{outlet.address}</p>
+                          </div>
+
+                          {/* Ambiance Note */}
+                          <p className="mt-2 text-xs leading-5 text-cream/50 font-light max-w-[46ch] transition-colors group-hover:text-cream/70">
+                            {outlet.vibe}
+                          </p>
+
+                          {/* Links & Timings */}
+                          <div className="mt-4 flex flex-wrap items-center gap-4 sm:gap-6 pt-3 border-t border-cream/[0.06]">
+                            <a
+                              href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
+                                outlet.mapQuery
+                              )}`}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              onClick={(e) => e.stopPropagation()}
+                              aria-label={`Open ${outlet.name} in Google Maps (opens in a new tab)`}
+                              className="inline-flex items-center gap-1.5 text-[10px] uppercase tracking-[0.22em] text-caramel transition-all duration-300 hover:text-caramel-light font-medium group-hover:translate-x-0.5"
+                            >
+                              Open in Maps
+                              <ArrowUpRight className="h-3 w-3" />
+                            </a>
+
+                            <a
+                              href={`tel:${outlet.phone}`}
+                              onClick={(e) => e.stopPropagation()}
+                              aria-label={`Call ${outlet.name} at ${outlet.displayPhone}`}
+                              className="inline-flex items-center gap-1.5 text-xs tabular-nums tracking-[0.04em] text-cream/60 transition-colors hover:text-caramel"
+                            >
+                              <Phone className="h-3 w-3 text-caramel/70" />
+                              {outlet.displayPhone}
+                            </a>
+
+                            <span className="inline-flex items-center gap-1.5 text-[10px] uppercase tracking-[0.2em] text-cream/50">
+                              <Clock className="h-3 w-3 text-cream/40" />
+                              {outlet.hours.split('•')[0].trim()}
+                            </span>
+                          </div>
                         </div>
+                      </div>
 
-                        {/* Address */}
-                        <div className="mt-2.5 flex items-start gap-2 text-sm leading-relaxed text-cream/70">
-                          <MapPin className="h-3.5 w-3.5 shrink-0 text-caramel/80 mt-1" />
-                          <p className="max-w-[48ch]">{outlet.address}</p>
-                        </div>
-
-                        {/* Ambiance Note */}
-                        <p className="mt-2 text-xs leading-5 text-cream/50 font-light max-w-[48ch]">
-                          {outlet.vibe}
-                        </p>
-
-                        {/* Links & Timings */}
-                        <div className="mt-4 flex flex-wrap items-center gap-5 sm:gap-7 pt-2 border-t border-cream/[0.06]">
-                          <a
-                            href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
-                              outlet.mapQuery
-                            )}`}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            onClick={(e) => e.stopPropagation()}
-                            aria-label={`Open ${outlet.name} in Google Maps (opens in a new tab)`}
-                            className="inline-flex items-center gap-1.5 text-[10px] uppercase tracking-[0.22em] text-caramel transition-colors hover:text-caramel-light focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-caramel/70 font-medium"
-                          >
-                            Open in Maps
-                            <ArrowUpRight className="h-3 w-3" />
-                          </a>
-
-                          <span className="inline-flex items-center gap-1.5 text-[10px] uppercase tracking-[0.2em] text-cream/50">
-                            <Clock className="h-3 w-3 text-cream/40" />
-                            {outlet.hours.split('•')[0].trim()}
-                          </span>
-                        </div>
+                      {/* Right Arrow Action Circle */}
+                      <div
+                        className={`shrink-0 h-9 w-9 rounded-full border flex items-center justify-center transition-all duration-300 mt-1 ${
+                          isActive
+                            ? 'border-caramel bg-caramel text-espresso shadow-md shadow-caramel/20'
+                            : 'border-cream/15 text-cream/40 group-hover:border-caramel/60 group-hover:text-caramel group-hover:bg-caramel/10 group-hover:scale-105'
+                        }`}
+                      >
+                        <ArrowUpRight
+                          className={`h-4 w-4 transition-transform duration-300 ${
+                            isActive
+                              ? 'translate-x-0.5 -translate-y-0.5'
+                              : 'group-hover:translate-x-0.5 group-hover:-translate-y-0.5'
+                          }`}
+                        />
                       </div>
                     </div>
                   </article>
