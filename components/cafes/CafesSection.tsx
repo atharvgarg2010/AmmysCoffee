@@ -164,7 +164,7 @@ export default function CafesSection() {
               The Chill Spot You&apos;ve Been Manifesting
             </span>
             <h2 className="font-serif text-[clamp(2.6rem,6vw,5.5rem)] font-normal leading-[0.98] tracking-[-0.03em] text-cream">
-              Five cafés. <br />
+              The Flagships. <br />
               <span className="font-light italic text-caramel-light">
                 One invitation.
               </span>
@@ -177,25 +177,24 @@ export default function CafesSection() {
             </p>
             <div className="mt-3.5 inline-flex items-center gap-2 text-xs tracking-[0.14em] uppercase text-caramel font-medium">
               <Clock className="h-3.5 w-3.5 text-caramel shrink-0" />
-              <span>All Flagships Open Daily · 08:00 AM – 11:30 PM</span>
+              <span>Open Daily · 08:00 AM – 11:30 PM</span>
             </div>
           </div>
         </div>
 
         {/* Sticky Editorial Grid: Left Photo Pins, Right Outlets Scroll */}
         <div className="mt-12 grid gap-10 sm:mt-16 lg:grid-cols-12 lg:gap-14 lg:items-start">
-          
+
           {/* Left Column: Pinned Sticky Photo Frame */}
           <div className="lg:col-span-5 lg:sticky lg:top-28 lg:self-start">
             <div className="relative aspect-[4/5] h-[460px] sm:h-[520px] lg:h-[580px] w-full overflow-hidden rounded-2xl border border-cream/10 bg-espresso-surface shadow-2xl">
-              
+
               {/* Stacked Images for instantaneous, silky cross-fade */}
               {outlets.map((outlet, index) => (
                 <div
                   key={outlet.name}
-                  className={`absolute inset-0 transition-opacity duration-700 ease-out ${
-                    activeIndex === index ? 'opacity-100 z-10' : 'opacity-0 z-0 pointer-events-none'
-                  }`}
+                  className={`absolute inset-0 transition-opacity duration-700 ease-out ${activeIndex === index ? 'opacity-100 z-10' : 'opacity-0 z-0 pointer-events-none'
+                    }`}
                 >
                   <Image
                     src={outlet.image}
@@ -216,7 +215,7 @@ export default function CafesSection() {
               <div className="absolute top-5 left-5 right-5 z-30 flex items-center justify-between pointer-events-none">
                 <span className="inline-flex items-center gap-2 rounded-full border border-cream/15 bg-espresso/60 px-3 py-1 text-[10px] uppercase tracking-[0.24em] text-caramel backdrop-blur-md">
                   <span className="h-1.5 w-1.5 rounded-full bg-caramel animate-pulse" />
-                  {`Outlet 0${activeIndex + 1} / 05`}
+                  Delhi NCR Flagship
                 </span>
                 <span className="text-[10px] uppercase tracking-[0.22em] text-cream/70 font-medium">
                   {activeOutlet.tag}
@@ -240,17 +239,16 @@ export default function CafesSection() {
                       type="button"
                       onClick={() => scrollToOutlet(i)}
                       aria-label={`Switch to outlet 0${i + 1}`}
-                      className={`h-1 rounded-full transition-all duration-300 pointer-events-auto ${
-                        activeIndex === i
+                      className={`h-1 rounded-full transition-all duration-300 pointer-events-auto ${activeIndex === i
                           ? 'w-7 bg-caramel'
                           : 'w-2 bg-cream/25 hover:bg-cream/50'
-                      }`}
+                        }`}
                     />
                   ))}
                 </div>
               </div>
             </div>
-            
+
             {/* Editorial Footer Line */}
             <div className="mt-3 flex items-center justify-between text-[10px] uppercase tracking-[0.22em] text-cream/60">
               <span>The Ammy&apos;s Room</span>
@@ -260,12 +258,11 @@ export default function CafesSection() {
 
           {/* Right Column: Outlets Scroll Track */}
           <div className="lg:col-span-7 relative">
-            
+
             {/* Top Fade Shadow (indicates content above when scrolled) */}
             <div
-              className={`pointer-events-none absolute top-0 left-0 right-0 h-10 bg-gradient-to-b from-espresso to-transparent z-20 transition-opacity duration-300 ${
-                isAtTop ? 'opacity-0' : 'opacity-100'
-              }`}
+              className={`pointer-events-none absolute top-0 left-0 right-0 h-10 bg-gradient-to-b from-espresso to-transparent z-20 transition-opacity duration-300 ${isAtTop ? 'opacity-0' : 'opacity-100'
+                }`}
             />
 
             {/* Bounded Scroll Container on desktop (Invisible scrollbar, smooth scroll track) */}
@@ -284,31 +281,28 @@ export default function CafesSection() {
                     }}
                     onMouseEnter={() => setActiveIndex(index)}
                     onClick={() => scrollToOutlet(index)}
-                    className={`group relative cursor-pointer py-7 sm:py-8 px-5 sm:px-7 -mx-2 sm:-mx-4 rounded-2xl transition-all duration-300 ease-out ${
-                      isActive
+                    className={`group relative cursor-pointer py-7 sm:py-8 px-5 sm:px-7 -mx-2 sm:-mx-4 rounded-2xl transition-all duration-300 ease-out ${isActive
                         ? 'bg-gradient-to-r from-caramel/[0.09] via-cream/[0.03] to-transparent shadow-lg shadow-black/20'
                         : 'hover:bg-gradient-to-r hover:from-caramel/[0.05] hover:via-cream/[0.015] hover:to-transparent'
-                    }`}
+                      }`}
                   >
                     {/* Left Vertical Accent Bar (Absolute - Zero Layout Jitter) */}
                     <span
                       aria-hidden="true"
-                      className={`absolute left-0 top-3 bottom-3 w-[2.5px] rounded-r-full transition-all duration-500 ease-out ${
-                        isActive
+                      className={`absolute left-0 top-3 bottom-3 w-[2.5px] rounded-r-full transition-all duration-500 ease-out ${isActive
                           ? 'bg-caramel opacity-100 scale-y-100 shadow-[0_0_12px_rgba(200,138,88,0.7)]'
                           : 'bg-caramel/40 opacity-0 scale-y-50 group-hover:opacity-100 group-hover:scale-y-90'
-                      }`}
+                        }`}
                     />
 
                     <div className="flex items-start justify-between gap-4">
                       <div className="flex items-start gap-4 sm:gap-6 min-w-0 flex-1">
                         {/* Monospace Badge Number */}
                         <span
-                          className={`mt-1 shrink-0 inline-flex items-center justify-center font-mono text-[10px] tracking-[0.2em] rounded-md px-2.5 py-1 transition-all duration-300 ${
-                            isActive
+                          className={`mt-1 shrink-0 inline-flex items-center justify-center font-mono text-[10px] tracking-[0.2em] rounded-md px-2.5 py-1 transition-all duration-300 ${isActive
                               ? 'bg-caramel/20 text-caramel border border-caramel/40 font-semibold'
                               : 'text-cream/40 border border-cream/10 group-hover:text-caramel group-hover:border-caramel/30 group-hover:bg-caramel/[0.08]'
-                          }`}
+                            }`}
                         >
                           {String(index + 1).padStart(2, '0')}
                         </span>
@@ -317,11 +311,10 @@ export default function CafesSection() {
                           {/* Kicker tag */}
                           <div className="mb-1.5">
                             <span
-                              className={`text-[10px] uppercase tracking-[0.24em] font-medium transition-colors ${
-                                isActive
+                              className={`text-[10px] uppercase tracking-[0.24em] font-medium transition-colors ${isActive
                                   ? 'text-caramel'
                                   : 'text-caramel/70 group-hover:text-caramel'
-                              }`}
+                                }`}
                             >
                               {outlet.tag}
                             </span>
@@ -329,11 +322,10 @@ export default function CafesSection() {
 
                           {/* Outlet Name with subtle kinetic nudge */}
                           <h3
-                            className={`font-serif text-2xl font-normal tracking-[-0.01em] transition-all duration-300 sm:text-[1.8rem] ${
-                              isActive
+                            className={`font-serif text-2xl font-normal tracking-[-0.01em] transition-all duration-300 sm:text-[1.8rem] ${isActive
                                 ? 'text-cream translate-x-1'
                                 : 'text-cream/80 group-hover:text-cream group-hover:translate-x-1'
-                            }`}
+                              }`}
                           >
                             {outlet.name}
                           </h3>
@@ -341,11 +333,10 @@ export default function CafesSection() {
                           {/* Address */}
                           <div className="mt-2.5 flex items-start gap-2 text-sm leading-relaxed text-cream/70 transition-colors group-hover:text-cream/85">
                             <MapPin
-                              className={`h-3.5 w-3.5 shrink-0 mt-1 transition-colors ${
-                                isActive
+                              className={`h-3.5 w-3.5 shrink-0 mt-1 transition-colors ${isActive
                                   ? 'text-caramel'
                                   : 'text-caramel/70 group-hover:text-caramel'
-                              }`}
+                                }`}
                             />
                             <p className="max-w-[46ch]">{outlet.address}</p>
                           </div>
@@ -386,18 +377,16 @@ export default function CafesSection() {
 
                       {/* Right Arrow Action Circle */}
                       <div
-                        className={`shrink-0 h-9 w-9 rounded-full border flex items-center justify-center transition-all duration-300 mt-1 ${
-                          isActive
+                        className={`shrink-0 h-9 w-9 rounded-full border flex items-center justify-center transition-all duration-300 mt-1 ${isActive
                             ? 'border-caramel bg-caramel text-espresso shadow-md shadow-caramel/20'
                             : 'border-cream/15 text-cream/40 group-hover:border-caramel/60 group-hover:text-caramel group-hover:bg-caramel/10 group-hover:scale-105'
-                        }`}
+                          }`}
                       >
                         <ArrowUpRight
-                          className={`h-4 w-4 transition-transform duration-300 ${
-                            isActive
+                          className={`h-4 w-4 transition-transform duration-300 ${isActive
                               ? 'translate-x-0.5 -translate-y-0.5'
                               : 'group-hover:translate-x-0.5 group-hover:-translate-y-0.5'
-                          }`}
+                            }`}
                         />
                       </div>
                     </div>
@@ -408,17 +397,14 @@ export default function CafesSection() {
 
             {/* Bottom Fade Shadow (indicates more content below) */}
             <div
-              className={`pointer-events-none absolute bottom-12 left-0 right-0 h-16 bg-gradient-to-t from-espresso to-transparent z-20 transition-opacity duration-300 ${
-                isAtBottom ? 'opacity-0' : 'opacity-100'
-              }`}
+              className={`pointer-events-none absolute bottom-12 left-0 right-0 h-16 bg-gradient-to-t from-espresso to-transparent z-20 transition-opacity duration-300 ${isAtBottom ? 'opacity-0' : 'opacity-100'
+                }`}
             />
 
             {/* Scroll Navigation & Hint Footer */}
             <div className="mt-5 flex items-center justify-between border-t border-cream/10 pt-4 text-xs text-cream/50">
               <span className="text-[10px] uppercase tracking-[0.22em] text-cream/60">
-                {isAtBottom
-                  ? 'All 5 Outlets Explored'
-                  : 'Scroll through flagships (5)'}
+                Delhi NCR Flagships
               </span>
 
               {/* Quick prev/next jumper buttons */}

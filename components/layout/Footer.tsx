@@ -78,7 +78,7 @@ export default function Footer() {
             </ul>
 
             <p className="mt-6 max-w-[30ch] text-sm leading-6 text-cream/60">
-              Five cafés across Delhi NCR. Come for the coffee. Stay for the
+              Flagships across Delhi NCR. Come for the coffee. Stay for the
               connection.
             </p>
           </div>
