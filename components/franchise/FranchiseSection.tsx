@@ -141,8 +141,8 @@ export default function FranchiseSection() {
 
   return (
     <section
-      id="franchise"
-      className="relative w-full scroll-mt-24 overflow-hidden border-t border-cream/10 bg-espresso pt-10 pb-20 text-cream sm:pt-14 sm:pb-28 lg:pt-16 lg:pb-36"
+      id="inquiry"
+      className="relative w-full scroll-mt-24 overflow-hidden border-t border-cream/10 bg-espresso pt-14 pb-20 text-cream sm:pt-20 sm:pb-28 lg:pt-24 lg:pb-36"
     >
       <div className="pointer-events-none absolute -right-24 top-1/3 h-[420px] w-[420px] rounded-full bg-caramel/[0.05] blur-[140px]" />
 
@@ -150,19 +150,17 @@ export default function FranchiseSection() {
         <div className="grid gap-12 lg:grid-cols-12 lg:gap-16">
           <div className="lg:col-span-5">
             <span className="mb-3 block text-[11px] font-medium uppercase tracking-[0.3em] text-caramel sm:text-xs">
-              Franchise With Us
+              Confidential Application
             </span>
             <h2 className="font-serif text-[clamp(2.6rem,6vw,5rem)] font-normal leading-[0.98] tracking-[-0.03em] text-cream">
-              Bring Ammy&apos;s <br />
+              Ready to launch <br />
               <span className="font-light italic text-caramel-light">
-                to your city.
+                your flagship?
               </span>
             </h2>
 
             <p className="mt-6 max-w-[44ch] text-sm leading-7 text-cream/70">
-              We&apos;re opening the next chapter of Ammy&apos;s across India. If
-              you share our standard for coffee, food, and hospitality, start
-              the conversation below.
+              Submit your territory and investment capacity below. Our expansion committee reviews each confidential inquiry within 48 business hours.
             </p>
 
             <dl className="mt-8 space-y-4 border-t border-cream/10 pt-6">
@@ -171,7 +169,7 @@ export default function FranchiseSection() {
                   01
                 </dt>
                 <dd className="text-sm leading-6 text-cream/70">
-                  Prime flagship presence across Delhi NCR.
+                  Direct evaluation by our executive committee.
                 </dd>
               </div>
               <div className="flex gap-4">
@@ -179,7 +177,7 @@ export default function FranchiseSection() {
                   02
                 </dt>
                 <dd className="text-sm leading-6 text-cream/70">
-                  A sit-down lifestyle café — not a grab-and-go kiosk.
+                  Micro-market demographic &amp; territory exclusivity check.
                 </dd>
               </div>
               <div className="flex gap-4">
@@ -187,21 +185,24 @@ export default function FranchiseSection() {
                   03
                 </dt>
                 <dd className="text-sm leading-6 text-cream/70">
-                  100% Arabica coffee and an artisanal kitchen.
+                  Turnkey architectural, equipment &amp; onboarding roadmap.
                 </dd>
               </div>
             </dl>
 
-            <div className="mt-8">
+            <div className="mt-8 space-y-2">
               <p className="text-[10px] uppercase tracking-[0.22em] text-cream/60">
-                Prefer email?
+                Direct Expansion Desk
               </p>
               <a
                 href="mailto:hello@ammyscoffee.com"
-                className="mt-2 inline-block border-b border-cream/25 pb-1 text-sm text-caramel transition-colors hover:border-caramel hover:text-caramel-light focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-caramel/70"
+                className="mt-1 inline-block border-b border-cream/25 pb-1 text-sm text-caramel transition-colors hover:border-caramel hover:text-caramel-light focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-caramel/70"
               >
                 hello@ammyscoffee.com
               </a>
+              <p className="text-xs text-cream/50 font-light pt-1">
+                New Delhi Corporate Office · Pan-India Expansion
+              </p>
             </div>
           </div>
 
