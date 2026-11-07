@@ -7,7 +7,7 @@ const footerLinks = [
   { label: 'The Craft', href: '/#craft' },
   { label: 'The Menu', href: '/menu' },
   { label: 'Café Outlets', href: '/#cafes' },
-  { label: 'Franchise', href: '/#franchise' },
+  { label: 'Franchise', href: '/franchise' },
 ];
 
 export default function Footer() {

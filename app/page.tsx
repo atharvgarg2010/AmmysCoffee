@@ -3,7 +3,7 @@ import Footer from '@/components/layout/Footer';
 import HeroSection from '@/components/hero/HeroSection';
 import StorySection from '@/components/story/StorySection';
 import CafesSection from '@/components/cafes/CafesSection';
-import FranchiseSection from '@/components/franchise/FranchiseSection';
+import VisitBanner from '@/components/home/VisitBanner';
 
 export default function HomePage() {
   return (
@@ -15,7 +15,7 @@ export default function HomePage() {
       <HeroSection />
       <StorySection />
       <CafesSection />
-      <FranchiseSection />
+      <VisitBanner />
       <Footer />
     </main>
   );

@@ -130,8 +130,12 @@ export default function Navbar() {
             </nav>
 
             <Link
-              href={isHome ? '#franchise' : '/#franchise'}
-              className="group inline-flex items-center gap-1.5 text-[11px] uppercase tracking-[0.28em] text-caramel hover:text-cream transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-caramel/70"
+              href="/franchise"
+              className={`group inline-flex items-center gap-1.5 text-[11px] uppercase tracking-[0.28em] transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-caramel/70 ${
+                pathname === '/franchise'
+                  ? 'text-caramel font-semibold'
+                  : 'text-caramel hover:text-cream'
+              }`}
             >
               <span>Franchise</span>
               <ArrowUpRight className="w-3 h-3 transition-transform duration-200 group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
@@ -141,7 +145,7 @@ export default function Navbar() {
           {/* Mobile Menu Trigger */}
           <div className="md:hidden flex items-center gap-4">
             <Link
-              href={isHome ? '#franchise' : '/#franchise'}
+              href="/franchise"
               onClick={() => setMobileMenuOpen(false)}
               className="py-2 text-[11px] uppercase tracking-[0.2em] font-medium text-caramel focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-caramel/70"
             >
@@ -194,7 +198,7 @@ export default function Navbar() {
               ))}
               <div className="flex flex-col space-y-3 border-t border-cream/[0.08] pt-5">
                 <Link
-                  href={isHome ? '#franchise' : '/#franchise'}
+                  href="/franchise"
                   onClick={() => setMobileMenuOpen(false)}
                   className="text-sm font-medium uppercase tracking-[0.25em] text-caramel transition-colors hover:text-caramel-light focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-caramel/70"
                 >
