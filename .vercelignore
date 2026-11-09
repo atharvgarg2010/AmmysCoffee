@@ -1,0 +1,12 @@
+# Ignore raw materials and archives
+brand_materials/
+assets/*.pdf
+assets/page_previews/
+assets/frame_test/
+assets/gallery_thumbs/
+assets/logo_*.png
+assets/logo_*.svg
+*.zip
+*.tar.gz
+.next/
+node_modules/
