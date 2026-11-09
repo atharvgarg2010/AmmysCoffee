@@ -2,65 +2,58 @@
 
 import { useState, useRef, useEffect, useCallback } from 'react';
 import Image from 'next/image';
-import { ArrowUpRight, ChevronDown, ChevronUp, MapPin, Phone, Clock } from 'lucide-react';
+import { ArrowUpRight, ChevronDown, ChevronUp, MapPin, Phone } from 'lucide-react';
 
 const outlets = [
   {
     name: 'Punjabi Bagh',
-    tag: 'Flagship Roastery',
+    tag: 'Flagship Café',
     address: 'Punjabi Bagh, Delhi',
     phone: '+919911000837',
     displayPhone: '+91 99110 00837',
     mapQuery: "Ammy's Coffee Punjabi Bagh Delhi",
     image: '/assets/photos/cafe_interior_1.webp',
-    hours: '08:00 AM – 11:30 PM • Open Daily',
-    vibe: 'Signature neon wall, hand-crafted wicker seating & artisanal espresso bar.',
+    vibe: 'Warm wicker seating, signature ambient lighting & artisanal espresso bar.',
   },
   {
     name: 'SDA Market',
-    tag: 'Campus & Creative Lounge',
-    address: 'SDA Market, Opposite IIT Main Gate, South Delhi',
+    tag: 'South Delhi Flagship',
+    address: 'SDA Market, Delhi',
     phone: '+919911000241',
     displayPhone: '+91 99110 00241',
-    mapQuery: "Ammy's Coffee SDA Market South Delhi",
+    mapQuery: "Ammy's Coffee SDA Market Delhi",
     image: '/assets/photos/cafe_interior_2.webp',
-    hours: '08:00 AM – 11:30 PM • Open Daily',
     vibe: 'Sunlit booth alcoves designed for deep focus, cold brews & long conversations.',
   },
   {
     name: 'Greater Kailash I',
     tag: 'Boutique Market Flagship',
-    address:
-      '1st Floor, M Block Market (above Wafflesome), Greater Kailash I, New Delhi',
+    address: '1st Floor, M Block Market (above Wafflesome), Delhi',
     phone: '+919911000528',
     displayPhone: '+91 99110 00528',
-    mapQuery:
-      "Ammy's Coffee M Block Market Greater Kailash I New Delhi",
+    mapQuery: "Ammy's Coffee M Block Market Greater Kailash I Delhi",
     image: '/assets/photos/cafe_ambience.webp',
-    hours: '08:00 AM – 11:30 PM • Open Daily',
     vibe: 'Warm amber glow, fluted architectural wall relief & flagship coffee kitchen.',
   },
   {
     name: 'Galleria Market',
-    tag: 'DLF Phase IV Flagship',
-    address: 'Galleria Market, DLF Phase IV, Gurugram',
+    tag: 'Galleria Flagship',
+    address: 'Galleria Market, Gurugram',
     phone: '+919911000179',
     displayPhone: '+91 99110 00179',
     mapQuery: "Ammy's Coffee Galleria Market Gurugram",
     image: '/assets/photos/cafe_barista.webp',
-    hours: '08:00 AM – 11:30 PM • Open Daily',
-    vibe: 'Specialty pour-over bar, single origins & lively evening open terrace breeze.',
+    vibe: 'Handcrafted 100% Arabica coffees, espresso bar & open terrace breeze.',
   },
   {
     name: 'Gujranwala Town',
     tag: 'North Delhi Flagship',
-    address: 'Next to Invitation, Gujranwala Town, Delhi',
+    address: 'Gujranwala Town (Next to Invitation), Delhi',
     phone: '+919911000627',
     displayPhone: '+91 99110 00627',
     mapQuery: "Ammy's Coffee Gujranwala Town Delhi",
     image: '/assets/photos/hero_poster.webp',
-    hours: '08:00 AM – 11:30 PM • Open Daily',
-    vibe: 'Grand community room, bespoke pastry showcase & late evening conversations.',
+    vibe: 'Community room, fresh pastry showcase & late afternoon conversations.',
   },
 ];
 
@@ -176,8 +169,8 @@ export default function CafesSection() {
               conversations, and the kind of afternoon that turns into evening.
             </p>
             <div className="mt-3.5 inline-flex items-center gap-2 text-xs tracking-[0.14em] uppercase text-caramel font-medium">
-              <Clock className="h-3.5 w-3.5 text-caramel shrink-0" />
-              <span>Open Daily · 08:00 AM – 11:30 PM</span>
+              <MapPin className="h-3.5 w-3.5 text-caramel shrink-0" />
+              <span>5 Outlets across Delhi NCR</span>
             </div>
           </div>
         </div>
@@ -252,7 +245,7 @@ export default function CafesSection() {
             {/* Editorial Footer Line */}
             <div className="mt-3 flex items-center justify-between text-[10px] uppercase tracking-[0.22em] text-cream/60">
               <span>The Ammy&apos;s Room</span>
-              <span>Open Daily · 08:00 AM – 11:30 PM</span>
+              <span>100% Arabica Standard</span>
             </div>
           </div>
 

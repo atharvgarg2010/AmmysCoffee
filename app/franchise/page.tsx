@@ -8,17 +8,46 @@ import FranchiseFormats from '@/components/franchise/FranchiseFormats';
 import FranchiseSection from '@/components/franchise/FranchiseSection';
 
 export const metadata: Metadata = {
-  title: "Franchise Partnerships | Ammy's Coffee — Pan-India Expansion",
+  title: "Franchise Inquiries | Ammy's Coffee — Partner Program",
   description:
-    "Partner with Ammy's Coffee: upscale sit-down specialty coffee and artisanal kitchen franchise expanding across prime retail corridors in Delhi NCR and Tier-1 Indian metros.",
+    "Explore franchise partnership opportunities with Ammy's Coffee: specialty 100% Arabica coffee craft and artisanal kitchen café formats across select locations.",
+  alternates: {
+    canonical: 'https://www.ammyscoffee.com/franchise',
+  },
+  openGraph: {
+    title: "Franchise Partnerships | Ammy's Coffee",
+    description:
+      "Partner with Ammy's Coffee: sit-down 100% Arabica craft coffee and artisanal kitchen café concepts.",
+    url: 'https://www.ammyscoffee.com/franchise',
+    siteName: "Ammy's Coffee",
+    images: [
+      {
+        url: '/assets/photos/cafe_barista.webp',
+        width: 1120,
+        height: 1400,
+        alt: "Ammy's Coffee Barista & Franchise Concept",
+      },
+    ],
+    locale: 'en_IN',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: "Franchise Partnerships | Ammy's Coffee",
+    description:
+      "Partner with Ammy's Coffee: sit-down 100% Arabica craft coffee and artisanal kitchen café concepts.",
+    images: ['/assets/photos/cafe_barista.webp'],
+  },
 };
 
 export default function FranchisePage() {
   return (
     <main
-      id="top"
-      className="min-h-screen bg-espresso text-cream selection:bg-caramel/30"
+      id="main-content"
+      tabIndex={-1}
+      className="min-h-screen bg-espresso text-cream selection:bg-caramel/30 focus:outline-none"
     >
+      <span id="top" className="sr-only" />
       <Navbar />
 
       {/* Top Spacer for Fixed Masthead */}
@@ -27,16 +56,16 @@ export default function FranchisePage() {
       {/* 1. Franchise Hero & Commercial Highlights */}
       <FranchiseHero />
 
-      {/* 2. Why Partner With Ammy's (4 Core Growth Pillars Bento Grid) */}
+      {/* 2. Concept Proof & Operational Pillars (Cream Section) */}
       <FranchisePillars />
 
-      {/* 3. 360° Turnkey Partner Support Roadmap */}
+      {/* 3. Proposed Partner Support Roadmap */}
       <FranchiseSupport />
 
-      {/* 4. Store Formats & Footprints (High-Street vs Galleria) */}
+      {/* 4. Store Formats & Footprints */}
       <FranchiseFormats />
 
-      {/* 5. Confidential Lead Application Form */}
+      {/* 5. Concept Lead Application Form */}
       <FranchiseSection />
 
       <Footer />

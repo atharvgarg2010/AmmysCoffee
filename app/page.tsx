@@ -8,9 +8,11 @@ import VisitBanner from '@/components/home/VisitBanner';
 export default function HomePage() {
   return (
     <main
-      id="top"
-      className="min-h-screen bg-espresso text-cream selection:bg-caramel/30"
+      id="main-content"
+      tabIndex={-1}
+      className="min-h-screen bg-espresso text-cream selection:bg-caramel/30 focus:outline-none"
     >
+      <span id="top" className="sr-only" />
       <Navbar />
       <HeroSection />
       <StorySection />

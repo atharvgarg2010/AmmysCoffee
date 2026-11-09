@@ -114,23 +114,28 @@ export default function Navbar() {
           {/* Desktop Editorial Nav + Franchise Link */}
           <div className="hidden md:flex items-center space-x-10">
             <nav className="flex items-center space-x-8" aria-label="Main Navigation">
-              {navLinks.map((link) => (
-                <Link
-                  key={link.label}
-                  href={link.href}
-                  className={`text-[11px] uppercase tracking-[0.28em] transition-colors duration-200 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-caramel/70 ${
-                    link.href === '/menu' && pathname === '/menu'
-                      ? 'text-caramel font-medium'
-                      : 'text-cream/60 hover:text-cream'
-                  }`}
-                >
-                  {link.label}
-                </Link>
-              ))}
+              {navLinks.map((link) => {
+                const isActive = link.href === '/menu' && pathname === '/menu';
+                return (
+                  <Link
+                    key={link.label}
+                    href={link.href}
+                    aria-current={isActive ? 'page' : undefined}
+                    className={`text-[11px] uppercase tracking-[0.28em] transition-colors duration-200 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-caramel/70 ${
+                      isActive
+                        ? 'text-caramel font-medium'
+                        : 'text-cream/60 hover:text-cream'
+                    }`}
+                  >
+                    {link.label}
+                  </Link>
+                );
+              })}
             </nav>
 
             <Link
               href="/franchise"
+              aria-current={pathname === '/franchise' ? 'page' : undefined}
               className={`group inline-flex items-center gap-1.5 text-[11px] uppercase tracking-[0.28em] transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-caramel/70 ${
                 pathname === '/franchise'
                   ? 'text-caramel font-semibold'
@@ -147,6 +152,7 @@ export default function Navbar() {
             <Link
               href="/franchise"
               onClick={() => setMobileMenuOpen(false)}
+              aria-current={pathname === '/franchise' ? 'page' : undefined}
               className="py-2 text-[11px] uppercase tracking-[0.2em] font-medium text-caramel focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-caramel/70"
             >
               Franchise
@@ -182,24 +188,29 @@ export default function Navbar() {
             className="md:hidden absolute top-full left-0 right-0 max-h-[calc(100svh-6rem)] overflow-y-auto overscroll-contain border-b border-cream/[0.08] bg-espresso px-8 py-8"
           >
             <div className="flex flex-col space-y-5">
-              {navLinks.map((link) => (
-                <Link
-                  key={link.label}
-                  href={link.href}
-                  onClick={() => setMobileMenuOpen(false)}
-                  className={`py-1 font-serif text-xl tracking-wide transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-caramel/70 sm:text-2xl ${
-                    link.href === '/menu' && pathname === '/menu'
-                      ? 'text-caramel'
-                      : 'text-cream/90 hover:text-caramel'
-                  }`}
-                >
-                  {link.label}
-                </Link>
-              ))}
+              {navLinks.map((link) => {
+                const isActive = link.href === '/menu' && pathname === '/menu';
+                return (
+                  <Link
+                    key={link.label}
+                    href={link.href}
+                    onClick={() => setMobileMenuOpen(false)}
+                    aria-current={isActive ? 'page' : undefined}
+                    className={`py-1 font-serif text-xl tracking-wide transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-caramel/70 sm:text-2xl ${
+                      isActive
+                        ? 'text-caramel'
+                        : 'text-cream/90 hover:text-caramel'
+                    }`}
+                  >
+                    {link.label}
+                  </Link>
+                );
+              })}
               <div className="flex flex-col space-y-3 border-t border-cream/[0.08] pt-5">
                 <Link
                   href="/franchise"
                   onClick={() => setMobileMenuOpen(false)}
+                  aria-current={pathname === '/franchise' ? 'page' : undefined}
                   className="text-sm font-medium uppercase tracking-[0.25em] text-caramel transition-colors hover:text-caramel-light focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-caramel/70"
                 >
                   Franchise Inquiries →

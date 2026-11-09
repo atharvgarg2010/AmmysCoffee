@@ -1,11 +1,11 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import { ArrowRight, MapPin, Clock, Compass } from 'lucide-react';
+import { ArrowRight, MapPin, Compass } from 'lucide-react';
 
 const locations = [
-  { name: 'Greater Kailash I', query: "Ammy's Coffee M Block Market Greater Kailash I New Delhi" },
+  { name: 'Greater Kailash I', query: "Ammy's Coffee M Block Market Greater Kailash I Delhi" },
   { name: 'Galleria Gurugram', query: "Ammy's Coffee Galleria Market Gurugram" },
-  { name: 'SDA Market', query: "Ammy's Coffee SDA Market South Delhi" },
+  { name: 'SDA Market', query: "Ammy's Coffee SDA Market Delhi" },
   { name: 'Punjabi Bagh', query: "Ammy's Coffee Punjabi Bagh Delhi" },
   { name: 'Gujranwala Town', query: "Ammy's Coffee Gujranwala Town Delhi" },
 ];
@@ -51,8 +51,7 @@ export default function VisitBanner() {
 
             {/* Body */}
             <p className="mt-6 max-w-[52ch] text-base font-light leading-relaxed text-cream/75 sm:text-lg">
-              Fresh 100% Arabica pours, artisanal kitchen signatures, and warm ambient rooms open daily from{' '}
-              <strong className="font-medium text-cream">08:00 AM to 11:30 PM</strong>. No reservations needed — just walk in and make yourself at home.
+              Fresh 100% Arabica pours, artisanal kitchen signatures, and warm ambient rooms open daily across Delhi NCR. No reservations needed — just walk in and make yourself at home.
             </p>
 
             {/* Direct Action CTAs */}
